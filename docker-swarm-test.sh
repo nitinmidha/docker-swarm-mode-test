@@ -6,8 +6,8 @@ docker run -d \
     --name swarm-test-1 \
     --net=host \
     --env-file ./environment-variables \
-    -v ~/.ssh/azure_rsa:/root/.ssh/id_rsa:ro \
-    -v ~/src/github/docker-swarm-mode-test/logs:/var/log/swarm-test \
+    -v ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro \
+    -v ~/docker-swarm-mode-test/logs:/var/log/swarm-test \
     "$remote_image"
 
 docker logs -f "$container_name"
