@@ -8,7 +8,8 @@ We are working on creating a mode, in which it will inspect desired state and wi
   3. **It will remove overlay network with name "test-overlay-network", if any.** 
 
 ## Instructions to set up 
-  1. Setup SSH (skip this step, if ssh key authentication is already set up.)
+  1. Clone this repo on a local machine. Local machine should not be part of test cluster.
+  2. Setup SSH (skip this step, if ssh key authentication is already set up.)
     1. ssh-keygen on your local machine
     2. Copy your ssh public key on test servers by using ssh-copy-id
     ```
@@ -34,7 +35,7 @@ We are working on creating a mode, in which it will inspect desired state and wi
     1. Update env-file path
     2. Update volume for SSH-keys. These are normally located under .ssh folder in user home directory
     3. Update volume for logs folder, this is where summary and detailed logs will be logged.
-  4. Run docker-swarm-test.sh
+  4. Run docker-swarm-test.sh on local machine.
     ```
     sudo ./docker-swarm-test.sh
     ``` 
