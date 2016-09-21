@@ -7,6 +7,7 @@ test_api_1_service_name="test-api1"
 test_api_2_service_name="test-api2"
 test_api_image="nitinmidha/node-test-api"
 
+
 docker service ls | grep -v IMAGE | awk '{print $1}' | xargs --no-run-if-empty docker service rm
 sleep 10s
 docker network ls | grep -w $overlay_network | awk '{print $1}' | xargs --no-run-if-empty docker network rm
