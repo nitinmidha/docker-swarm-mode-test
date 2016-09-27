@@ -40,6 +40,10 @@ router.get('/hostname',function(req,res){
    res.send(hostname)
 });
 
+router.get('/health',function(req,res){
+   res.send('ok')
+});
+
 app.use('/', router);
 
 // Start listening
