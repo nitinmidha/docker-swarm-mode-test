@@ -32,7 +32,8 @@ router.get('/',function(req,res){
 router.get('/details',function(req,res){
    res.json({message:'Success',
              container_id:hostname,
-            headers:req.headers
+            headers:req.headers,
+            env:process.env
     });
 });
 
@@ -43,6 +44,7 @@ router.get('/hostname',function(req,res){
 router.get('/health',function(req,res){
    res.send('ok')
 });
+
 
 app.use('/', router);
 
